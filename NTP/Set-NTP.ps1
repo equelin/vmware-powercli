@@ -4,6 +4,8 @@
 .DESCRIPTION
   Set de NTP configuration on VMware ESXi hosts.
   You have to be connected on a host or a vCenter.
+.LINK
+  https://github.com/equelin/vmware-powercli
 .PARAMETER VMHost
   VMWare vSPhere ESXi host provided for example with command Get-VMHost
 .PARAMETER Policy
@@ -21,9 +23,13 @@
   Get-VMHost | Set-NTP -NtpServer 192.168.1.1 -Policy On -StartService
 
  Setup the NTP services on all VMhosts provided by the Get-VMHost command.
-.LINK
-  http://blog.okcomputer.io
-
+.NOTES
+  ===========================================================================
+    Created on:    10/04/2016 02:00 PM
+    Created by:    Erwan Quelin
+    Twitter:       @erwanquelin
+    Github:        https://github.com/equelin
+  ===========================================================================
 #>
 
 [CmdletBinding()]

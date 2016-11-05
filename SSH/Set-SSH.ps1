@@ -5,7 +5,7 @@
   SSH configuration on VMware ESXi hosts.
   You have to be connected on a host or a vCenter
 .LINK
-  http://blog.okcomputer.io
+  https://github.com/equelin/vmware-powercli
 .PARAMETER VMHost
   VMWare vSPhere ESXi host provided for example with command Get-VMHost.
 .PARAMETER StartService
@@ -25,6 +25,13 @@
   Get-VMHost | Set-SSH -Policy On -StartService -DisableWarning
 
   Configure SSH service
+.NOTES
+  ===========================================================================
+    Created on:    10/04/2016 02:00 PM
+    Created by:    Erwan Quelin
+    Twitter:       @erwanquelin
+    Github:        https://github.com/equelin
+  ===========================================================================
 #>
 
 [CmdletBinding()]

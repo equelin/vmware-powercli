@@ -5,7 +5,7 @@
   SSH configuration on VMware ESXi hosts.
   You have to be connected on a host or a vCenter.
 .LINK
-  http://blog.okcomputer.io
+  https://github.com/equelin/vmware-powercli
 .PARAMETER VMHost
   VMWare vSPhere ESXi host provided for example with command Get-VMHost
 .PARAMETER SyslogServer
@@ -22,6 +22,13 @@
 Get-VMHost | Set-Syslog -SyslogServer udp://192.168.0.1:513
 
  Configure syslog service for all hosts
+.NOTES
+  ===========================================================================
+    Created on:    10/04/2016 02:00 PM
+    Created by:    Erwan Quelin
+    Twitter:       @erwanquelin
+    Github:        https://github.com/equelin
+  ===========================================================================
 #>
 
 [CmdletBinding()]
