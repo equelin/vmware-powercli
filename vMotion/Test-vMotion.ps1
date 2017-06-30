@@ -117,8 +117,8 @@ If($Cluster -ne $null){
     
     $singlevm = $false
     $targetcluster = Get-Cluster $Cluster
-    $vms = $targetcluster | Get-VM | Where{$_.PowerState -eq "PoweredON"} | Sort-Object
-    $vmhosts = $targetcluster | Get-VMHost | Where{($_.ConnectionState -eq "Connected") -and ($_.PowerState -eq "PoweredOn")}
+    $vms = $targetcluster | Get-VM | Where-Object {$_.PowerState -eq "PoweredON"} | Sort-Object
+    $vmhosts = $targetcluster | Get-VMHost | Where-Object {($_.ConnectionState -eq "Connected") -and ($_.PowerState -eq "PoweredOn")}
         If ($vmhosts.Count -lt 2){
             Return "You must provide a target host that is not the source host $sourcehost"
         }
